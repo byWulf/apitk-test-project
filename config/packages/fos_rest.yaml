@@ -1,0 +1,26 @@
+fos_rest:
+    param_fetcher_listener:  true
+    view:
+        view_response_listener: true
+        formats:
+            json: true
+            dto: true
+        mime_types:
+            dto: ['application/vnd.dto', 'application/vnd.api.dto']
+    versioning: true
+    service:
+        view_handler: app.view_handler
+    exception:
+        serializer_error_renderer: true
+    body_converter:
+        enabled: true
+        validate: true
+    body_listener:
+        enabled: true
+    format_listener:
+        enabled: true
+        rules:
+            - { path: ^/, prefer_extension: true, fallback_format: json, priorities: [ json, dto, html ] }
+
+sensio_framework_extra:
+    request: { converters: true }
