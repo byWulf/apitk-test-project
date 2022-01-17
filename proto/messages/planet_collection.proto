@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package myapi.proto.v1;
+
+import "planet.proto";
+
+message PlanetCollection {
+  repeated Planet planets = 1;
+}

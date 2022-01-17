@@ -17,6 +17,7 @@
         "doctrine/doctrine-migrations-bundle": "^3.2",
         "doctrine/orm": "^2.10",
         "friendsofsymfony/rest-bundle": "^3.2",
+        "google/protobuf": "^3.19",
         "phpdocumentor/reflection-docblock": "^5.3",
         "phpstan/phpdoc-parser": "^1.2",
         "symfony/asset": "6.0.*",
@@ -67,7 +68,9 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "Myapi\\Proto\\": "proto/gen/Myapi/Proto/",
+            "GPBMetadata\\": "proto/gen/GPBMetadata/"
         }
     },
     "autoload-dev": {
@@ -93,6 +96,10 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "buf": [
+            "./bin/buf build",
+            "rm -rf proto/gen/* && ./bin/buf generate"
         ]
     },
     "conflict": {

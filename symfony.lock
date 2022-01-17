@@ -124,6 +124,9 @@
             "config/packages/fos_rest.yaml"
         ]
     },
+    "google/protobuf": {
+        "version": "v3.19.3"
+    },
     "laminas/laminas-code": {
         "version": "4.5.1"
     },

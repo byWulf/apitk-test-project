@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace App\Dto\Mapper;
 
+use App\Entity\Planet;
 use App\Dto\PlanetV1;
 use Shopping\ApiTKDtoMapperBundle\DtoMapper\MapperInterface;
 

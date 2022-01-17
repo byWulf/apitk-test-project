@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package myapi.proto.v1;
+
+message Planet {
+  uint32 id = 1;
+  string name = 2;
+  enum Type {
+    GAS = 0;
+    STONE = 1;
+    ICE = 2;
+  }
+  Type type = 3;
+  uint64 diameter = 4;
+}
