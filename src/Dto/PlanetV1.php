@@ -8,7 +8,7 @@ final class PlanetV1
     public function __construct(
         private int $id,
         private string $name,
-        private string $type,
+        private PlanetTypeEnumV1 $type,
         private ?int $diameter,
     ) {}
 
@@ -29,9 +29,9 @@ final class PlanetV1
     }
 
     /**
-     * @return string
+     * @return PlanetTypeEnumV1
      */
-    public function getType(): string
+    public function getType(): PlanetTypeEnumV1
     {
         return $this->type;
     }

@@ -10,7 +10,7 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        for ($i = 0; $i < 20; $i++) {
+        for ($i = 0; $i < 50; $i++) {
             $types = ['stone', 'gas', 'ice'];
 
             $planet = new Planet();
