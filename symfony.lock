@@ -11,6 +11,9 @@
     "check24/apitk-header-bundle": {
         "version": "dev-feature/symfony-6"
     },
+    "check24/apitk-url-bundle": {
+        "version": "dev-feature/symfony-6"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.4"
     },

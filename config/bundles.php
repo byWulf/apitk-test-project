@@ -16,4 +16,5 @@ return [
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
     Shopping\ApiTKDtoMapperBundle\ShoppingApiTKDtoMapperBundle::class => ['all' => true],
     Symfony\Bundle\WebProfilerBundle\WebProfilerBundle::class => ['dev' => true, 'test' => true],
+    Shopping\ApiTKUrlBundle\ShoppingApiTKUrlBundle::class => ['all' => true],
 ];

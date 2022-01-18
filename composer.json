@@ -11,6 +11,7 @@
         "check24/apitk-deprecation-bundle": "dev-feature/symfony-6 as 4.0.0",
         "check24/apitk-dtomapper-bundle": "dev-feature/symfony-6 as 4.0.0",
         "check24/apitk-header-bundle": "dev-feature/symfony-6 as 4.0.0",
+        "check24/apitk-url-bundle": "dev-feature/symfony-6 as 4.0.0",
         "composer/package-versions-deprecated": "1.11.99.4",
         "doctrine/annotations": "^1.0",
         "doctrine/doctrine-bundle": "^2.5",
@@ -52,6 +53,10 @@
         {
             "type": "path",
             "url": "../apitk-dtomapper-bundle"
+        },
+        {
+            "type": "path",
+            "url": "../apitk-url-bundle"
         }
     ],
     "config": {

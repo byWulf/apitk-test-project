@@ -10,6 +10,7 @@ use Shopping\ApiTKDeprecationBundle\Annotation\Deprecated;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Dto\Mapper\PlanetV1Mapper;
 use App\Dto\Mapper\PlanetProtoMapper;
+use Shopping\ApiTKDtoMapperBundle\Annotation as DtoMapper;
 
 class PlanetController extends AbstractController
 {
@@ -27,12 +28,10 @@ class PlanetController extends AbstractController
 
 
     /**
-     * @\Shopping\ApiTKDtoMapperBundle\Annotation\View(dtoMapper=PlanetV1Mapper::class)
-     *
-     * @param EntityManagerInterface $manager
      * @return Planet[]
      */
     #[Get('/api/v123/planet_array_dto', name: 'planet_array_dto_v1')]
+    #[DtoMapper\View(dtoMapper: PlanetV1Mapper::class)]
     public function getPlanetsDto(EntityManagerInterface $manager): array
     {
         $repository = $manager->getRepository(Planet::class);
@@ -42,13 +41,8 @@ class PlanetController extends AbstractController
         return $planets;
     }
 
-    /**
-     * @\Shopping\ApiTKDtoMapperBundle\Annotation\View(dtoMapper=PlanetV1Mapper::class)
-     *
-     * @param EntityManagerInterface $manager
-     * @return Planet
-     */
     #[Get('/api/v123/planet_dto', name: 'planet_dto_v1')]
+    #[DtoMapper\View(dtoMapper: PlanetV1Mapper::class)]
     public function getSinglePlanetDto(EntityManagerInterface $manager): Planet
     {
         $repository = $manager->getRepository(Planet::class);
