@@ -12,9 +12,10 @@ class AppFixtures extends Fixture
     {
         for ($i = 0; $i < 50; $i++) {
             $types = ['stone', 'gas', 'ice'];
+            $prefixes = ['A', 'UT', 'KP', 'X'];
 
             $planet = new Planet();
-            $planet->setName('Planet ' . array_rand(['A', 'UT', 'KP', 'X']) . '-' . $i);
+            $planet->setName('Planet ' . $prefixes[array_rand($prefixes)] . '-' . $i);
             $planet->setType($types[array_rand($types)]);
             $planet->setDiameter(random_int(10_000, 10_000_000));
             $manager->persist($planet);

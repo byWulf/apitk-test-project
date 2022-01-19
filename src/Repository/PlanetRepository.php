@@ -3,8 +3,8 @@
 namespace App\Repository;
 
 use App\Entity\Planet;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Shopping\ApiTKUrlBundle\Repository\ApiToolkitServiceRepository;
 
 /**
  * @method Planet|null find($id, $lockMode = null, $lockVersion = null)
@@ -12,7 +12,7 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Planet[]    findAll()
  * @method Planet[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class PlanetRepository extends ServiceEntityRepository
+class PlanetRepository extends ApiToolkitServiceRepository
 {
     public function __construct(ManagerRegistry $registry)
     {

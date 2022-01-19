@@ -12,7 +12,7 @@
             "dist": {
                 "type": "path",
                 "url": "../apitk-common-bundle",
-                "reference": "38f55431c940c47c64b0ec3bc85b458ded9d7727"
+                "reference": "3386c8dddf9d7f3f319eefdae2aab1a932334f29"
             },
             "require": {
                 "nelmio/api-doc-bundle": "^v4.8",
