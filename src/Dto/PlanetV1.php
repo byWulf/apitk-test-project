@@ -2,11 +2,15 @@
 declare(strict_types=1);
 
 namespace App\Dto;
+use Symfony\Component\Validator\Constraints as Assert;
 
 final class PlanetV1
 {
     public function __construct(
         private int $id,
+        /**
+         * @Assert\NotBlank
+         */
         private string $name,
         private PlanetTypeEnumV1 $type,
         private ?int $diameter,

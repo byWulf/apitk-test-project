@@ -17,4 +17,5 @@ return [
     Shopping\ApiTKDtoMapperBundle\ShoppingApiTKDtoMapperBundle::class => ['all' => true],
     Symfony\Bundle\WebProfilerBundle\WebProfilerBundle::class => ['dev' => true, 'test' => true],
     Shopping\ApiTKUrlBundle\ShoppingApiTKUrlBundle::class => ['all' => true],
+    Shopping\ApiTKManipulationBundle\ShoppingApiTKManipulationBundle::class => ['all' => true],
 ];

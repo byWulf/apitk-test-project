@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2c699265b0f321d511aa7ea15fa7931",
+    "content-hash": "27f0c4298c4c9a9f1e9e973d40fcb9ce",
     "packages": [
         {
             "name": "check24/apitk-common-bundle",
@@ -88,11 +88,11 @@
             "dist": {
                 "type": "path",
                 "url": "../apitk-deprecation-bundle",
-                "reference": "f1ca66bdbbca3f4a895be4f477bdc1324e9c36d9"
+                "reference": "e339cec3f1472ddddecf18ba4221da7e1bdcde95"
             },
             "require": {
-                "check24/apitk-common-bundle": "dev-feature/symfony-6 as 4.0.0",
-                "check24/apitk-header-bundle": "dev-feature/symfony-6 as 4.0.0",
+                "check24/apitk-common-bundle": "^4.0",
+                "check24/apitk-header-bundle": "^4.0",
                 "doctrine/annotations": "^1.13",
                 "nelmio/api-doc-bundle": "^4.8",
                 "php": "^8.0",
@@ -170,10 +170,10 @@
             "dist": {
                 "type": "path",
                 "url": "../apitk-dtomapper-bundle",
-                "reference": "1e63c33d0328a3e83617f1fb52b183d0809d592f"
+                "reference": "fc7beeab27802ceefe2b647da7eba92de8e8ebbb"
             },
             "require": {
-                "check24/apitk-common-bundle": "dev-feature/symfony-6 as 4.0.0",
+                "check24/apitk-common-bundle": "^4.0",
                 "doctrine/annotations": "^1.13",
                 "friendsofsymfony/rest-bundle": "^3.2",
                 "nelmio/api-doc-bundle": "^4.8",
@@ -242,7 +242,7 @@
             "dist": {
                 "type": "path",
                 "url": "../apitk-header-bundle",
-                "reference": "edae408c51b392a5d6e863b9c485499731974d00"
+                "reference": "750d594229b2857751c24cc884fc8a28c850e995"
             },
             "require": {
                 "php": "^8.0",
@@ -302,16 +302,89 @@
             }
         },
         {
+            "name": "check24/apitk-manipulation-bundle",
+            "version": "dev-feature/symfony-6",
+            "dist": {
+                "type": "path",
+                "url": "../apitk-manipulation-bundle",
+                "reference": "e3c750db80b8ad4814da1ba80cff63935d3fa97a"
+            },
+            "require": {
+                "check24/apitk-common-bundle": "^4.0",
+                "doctrine/doctrine-bundle": "^2.2",
+                "doctrine/orm": "^2.5",
+                "doctrine/persistence": "^2",
+                "nelmio/api-doc-bundle": "^4.8",
+                "php": "^8.0",
+                "sensio/framework-extra-bundle": "^5.2 || ^6.0",
+                "symfony/config": "^5.3 || ^6.0",
+                "symfony/dependency-injection": "^5.3 || ^6.0",
+                "symfony/form": "^5.3 || ^6.0",
+                "symfony/framework-bundle": "^5.3 || ^6.0"
+            },
+            "require-dev": {
+                "captainhook/captainhook": "^5.10",
+                "captainhook/plugin-composer": "^5.3",
+                "friendsofphp/php-cs-fixer": "^3.4",
+                "phpmd/phpmd": "^2.11",
+                "phpstan/phpstan": "^1.4",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpunit/phpunit": "^9.3",
+                "roave/security-advisories": "dev-latest",
+                "symfony/phpunit-bridge": "^5.3 || ^6.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Shopping\\ApiTKManipulationBundle\\": "src/"
+                }
+            },
+            "scripts": {
+                "fix": [
+                    "@fix:php-cs-fixer"
+                ],
+                "fix:php-cs-fixer": [
+                    "@php vendor/bin/php-cs-fixer fix --verbose"
+                ],
+                "test": [
+                    "@test:php-cs-fixer",
+                    "@test:phpstan",
+                    "@test:phpmd"
+                ],
+                "test:php-cs-fixer": [
+                    "@php vendor/bin/php-cs-fixer fix --verbose --dry-run"
+                ],
+                "test:phpmd": [
+                    "@php vendor/bin/phpmd ./ text ruleset.xml --exclude vendor"
+                ],
+                "test:phpstan": [
+                    "@php vendor/bin/phpstan analyse -c phpstan.neon ."
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Dormann",
+                    "email": "alexdo@alexdo.de"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "check24/apitk-url-bundle",
             "version": "dev-feature/symfony-6",
             "dist": {
                 "type": "path",
                 "url": "../apitk-url-bundle",
-                "reference": "96d8ee842fc0dd56900ea7591589bf5bf9345745"
+                "reference": "46a33aec25135243930e301a7d750da9505480de"
             },
             "require": {
-                "check24/apitk-common-bundle": "dev-feature/symfony-6 as 4.0.0",
-                "check24/apitk-header-bundle": "dev-feature/symfony-6 as 4.0.0",
+                "check24/apitk-common-bundle": "^4.0",
+                "check24/apitk-header-bundle": "^4.0",
                 "doctrine/annotations": "^1.13",
                 "nelmio/api-doc-bundle": "^4.8",
                 "php": "^8.0",
@@ -3880,16 +3953,16 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v2.0.1",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "3dbfa5c4e3308fd9def9a2006a20fa0c272a30a2"
+                "reference": "82891fd872056499ce7a7c4aca7ffeb86a341878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/3dbfa5c4e3308fd9def9a2006a20fa0c272a30a2",
-                "reference": "3dbfa5c4e3308fd9def9a2006a20fa0c272a30a2",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/82891fd872056499ce7a7c4aca7ffeb86a341878",
+                "reference": "82891fd872056499ce7a7c4aca7ffeb86a341878",
                 "shasum": ""
             },
             "require": {
@@ -3925,7 +3998,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v2.0.1"
+                "source": "https://github.com/symfony/flex/tree/v2.1.2"
             },
             "funding": [
                 {
@@ -3941,7 +4014,109 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-29T15:40:20+00:00"
+            "time": "2022-01-19T17:52:43+00:00"
+        },
+        {
+            "name": "symfony/form",
+            "version": "v6.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/form.git",
+                "reference": "07f444b02feec6676b3c67171d8e2503acf52859"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/form/zipball/07f444b02feec6676b3c67171d8e2503acf52859",
+                "reference": "07f444b02feec6676b3c67171d8e2503acf52859",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.2",
+                "symfony/deprecation-contracts": "^2.1|^3",
+                "symfony/event-dispatcher": "^5.4|^6.0",
+                "symfony/options-resolver": "^5.4|^6.0",
+                "symfony/polyfill-ctype": "~1.8",
+                "symfony/polyfill-intl-icu": "^1.21",
+                "symfony/polyfill-mbstring": "~1.0",
+                "symfony/polyfill-php81": "^1.23",
+                "symfony/property-access": "^5.4|^6.0",
+                "symfony/service-contracts": "^1.1|^2|^3"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<5.4.3",
+                "symfony/console": "<5.4",
+                "symfony/dependency-injection": "<5.4",
+                "symfony/doctrine-bridge": "<5.4",
+                "symfony/error-handler": "<5.4",
+                "symfony/framework-bundle": "<5.4",
+                "symfony/http-kernel": "<5.4",
+                "symfony/translation": "<5.4",
+                "symfony/translation-contracts": "<1.1.7",
+                "symfony/twig-bridge": "<5.4"
+            },
+            "require-dev": {
+                "doctrine/collections": "~1.0",
+                "symfony/config": "^5.4|^6.0",
+                "symfony/console": "^5.4|^6.0",
+                "symfony/dependency-injection": "^5.4|^6.0",
+                "symfony/expression-language": "^5.4|^6.0",
+                "symfony/http-foundation": "^5.4|^6.0",
+                "symfony/http-kernel": "^5.4|^6.0",
+                "symfony/intl": "^5.4|^6.0",
+                "symfony/security-csrf": "^5.4|^6.0",
+                "symfony/translation": "^5.4|^6.0",
+                "symfony/uid": "^5.4|^6.0",
+                "symfony/validator": "^5.4|^6.0",
+                "symfony/var-dumper": "^5.4|^6.0"
+            },
+            "suggest": {
+                "symfony/security-csrf": "For protecting forms against CSRF attacks.",
+                "symfony/twig-bridge": "For templating with Twig.",
+                "symfony/validator": "For form validation."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Form\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Allows to easily create, process and reuse HTML forms",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/form/tree/v6.0.2"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-12-27T21:05:08+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -4493,6 +4668,93 @@
                 }
             ],
             "time": "2021-11-23T21:10:46+00:00"
+        },
+        {
+            "name": "symfony/polyfill-intl-icu",
+            "version": "v1.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-icu.git",
+                "reference": "c023a439b8551e320cc3c8433b198e408a623af1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/c023a439b8551e320cc3c8433b198e408a623af1",
+                "reference": "c023a439b8551e320cc3c8433b198e408a623af1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "suggest": {
+                "ext-intl": "For best performance and support of other locales than \"en\""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.23-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Intl\\Icu\\": ""
+                },
+                "classmap": [
+                    "Resources/stubs"
+                ],
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's ICU-related data and classes",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "icu",
+                "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-intl-icu/tree/v1.24.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-10-26T17:16:04+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
@@ -6500,16 +6762,16 @@
         },
         {
             "name": "zircote/swagger-php",
-            "version": "4.2.2",
+            "version": "4.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zircote/swagger-php.git",
-                "reference": "910eda5bc1114d7d203af7788df462b781f98286"
+                "reference": "f00ba9db74722f029412705419c67bdd98e707fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/910eda5bc1114d7d203af7788df462b781f98286",
-                "reference": "910eda5bc1114d7d203af7788df462b781f98286",
+                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/f00ba9db74722f029412705419c67bdd98e707fb",
+                "reference": "f00ba9db74722f029412705419c67bdd98e707fb",
                 "shasum": ""
             },
             "require": {
@@ -6569,24 +6831,24 @@
             ],
             "support": {
                 "issues": "https://github.com/zircote/swagger-php/issues",
-                "source": "https://github.com/zircote/swagger-php/tree/4.2.2"
+                "source": "https://github.com/zircote/swagger-php/tree/4.2.4"
             },
-            "time": "2022-01-16T05:39:33+00:00"
+            "time": "2022-01-20T08:28:48+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "doctrine/data-fixtures",
-            "version": "1.5.1",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/data-fixtures.git",
-                "reference": "f18adf13f6c81c67a88360dca359ad474523f8e3"
+                "reference": "51c1890e8c5467c421c7cab4579f059ebf720278"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/f18adf13f6c81c67a88360dca359ad474523f8e3",
-                "reference": "f18adf13f6c81c67a88360dca359ad474523f8e3",
+                "url": "https://api.github.com/repos/doctrine/data-fixtures/zipball/51c1890e8c5467c421c7cab4579f059ebf720278",
+                "reference": "51c1890e8c5467c421c7cab4579f059ebf720278",
                 "shasum": ""
             },
             "require": {
@@ -6595,15 +6857,20 @@
                 "php": "^7.2 || ^8.0"
             },
             "conflict": {
+                "doctrine/dbal": "<2.13",
                 "doctrine/phpcr-odm": "<1.3.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^9.0",
-                "doctrine/dbal": "^2.5.4 || ^3.0",
+                "doctrine/dbal": "^2.13 || ^3.0",
                 "doctrine/mongodb-odm": "^1.3.0 || ^2.0.0",
                 "doctrine/orm": "^2.7.0",
                 "ext-sqlite3": "*",
-                "phpunit/phpunit": "^8.0"
+                "jangregor/phpstan-prophecy": "^0.8.1",
+                "phpstan/phpstan": "^0.12.99",
+                "phpunit/phpunit": "^8.0",
+                "symfony/cache": "^5.0 || ^6.0",
+                "vimeo/psalm": "^4.10"
             },
             "suggest": {
                 "alcaeus/mongo-php-adapter": "For using MongoDB ODM 1.3 with PHP 7 (deprecated)",
@@ -6628,13 +6895,13 @@
                 }
             ],
             "description": "Data Fixtures for all Doctrine Object Managers",
-            "homepage": "http://www.doctrine-project.org",
+            "homepage": "https://www.doctrine-project.org",
             "keywords": [
                 "database"
             ],
             "support": {
                 "issues": "https://github.com/doctrine/data-fixtures/issues",
-                "source": "https://github.com/doctrine/data-fixtures/tree/1.5.1"
+                "source": "https://github.com/doctrine/data-fixtures/tree/1.5.2"
             },
             "funding": [
                 {
@@ -6650,7 +6917,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-20T21:51:43+00:00"
+            "time": "2022-01-20T17:10:56+00:00"
         },
         {
             "name": "doctrine/doctrine-fixtures-bundle",
@@ -6985,6 +7252,12 @@
             "alias_normalized": "4.0.0.0"
         },
         {
+            "package": "check24/apitk-manipulation-bundle",
+            "version": "dev-feature/symfony-6",
+            "alias": "4.0.0",
+            "alias_normalized": "4.0.0.0"
+        },
+        {
             "package": "check24/apitk-url-bundle",
             "version": "dev-feature/symfony-6",
             "alias": "4.0.0",
@@ -6997,7 +7270,8 @@
         "check24/apitk-deprecation-bundle": 20,
         "check24/apitk-dtomapper-bundle": 20,
         "check24/apitk-header-bundle": 20,
-        "check24/apitk-url-bundle": 20
+        "check24/apitk-url-bundle": 20,
+        "check24/apitk-manipulation-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

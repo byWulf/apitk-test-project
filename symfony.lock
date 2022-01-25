@@ -11,6 +11,9 @@
     "check24/apitk-header-bundle": {
         "version": "dev-feature/symfony-6"
     },
+    "check24/apitk-manipulation-bundle": {
+        "version": "dev-feature/symfony-6"
+    },
     "check24/apitk-url-bundle": {
         "version": "dev-feature/symfony-6"
     },
@@ -251,6 +254,9 @@
             ".env"
         ]
     },
+    "symfony/form": {
+        "version": "v6.0.2"
+    },
     "symfony/framework-bundle": {
         "version": "6.0",
         "recipe": {
@@ -292,6 +298,9 @@
         "version": "v6.0.2"
     },
     "symfony/polyfill-intl-grapheme": {
+        "version": "v1.24.0"
+    },
+    "symfony/polyfill-intl-icu": {
         "version": "v1.24.0"
     },
     "symfony/polyfill-intl-normalizer": {
