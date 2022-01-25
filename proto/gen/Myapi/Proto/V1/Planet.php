@@ -7,6 +7,7 @@ namespace Myapi\Proto\V1;
 use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Myapi\Proto\V1\Planet\Type;
 
 /**
  * Generated from protobuf message <code>myapi.proto.v1.Planet</code>
@@ -15,18 +16,22 @@ class Planet extends \Google\Protobuf\Internal\Message
 {
     /**
      * Generated from protobuf field <code>uint32 id = 1 [json_name = "id"];</code>
+     * @var int
      */
     protected $id = 0;
     /**
      * Generated from protobuf field <code>string name = 2 [json_name = "name"];</code>
+     * @var string
      */
     protected $name = '';
     /**
      * Generated from protobuf field <code>.myapi.proto.v1.Planet.Type type = 3 [json_name = "type"];</code>
+     * @var Type
      */
     protected $type = 0;
     /**
      * Generated from protobuf field <code>uint64 diameter = 4 [json_name = "diameter"];</code>
+     * @var int
      */
     protected $diameter = 0;
 

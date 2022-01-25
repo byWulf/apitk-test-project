@@ -7,9 +7,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Dto\Mapper\PlanetV1Mapper;
 use Shopping\ApiTKDtoMapperBundle\Annotation as DtoMapper;
 use Shopping\ApiTKUrlBundle\Annotation as ApiTK;
-use OpenApi\Attributes as OA;
+use OpenApi\Annotations as OA;
 
-#[OA\Tag('apitk-url-bundle')]
+/**
+ * @OA\Tag(name="apitk-url-bundle")
+ */
 class PlanetFilterSortPaginateController extends AbstractController
 {
     /**
